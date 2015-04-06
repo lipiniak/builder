@@ -1,11 +1,26 @@
-var zmienna = 1;
+var Node = function (id) {
+  this.id = id;
+};
 
-var root;
+Node.prototype.nodeID = function() {
+  console.log(this.id);
+};
+
+var Tree = function(){
+	this.branch = new Array()
+};
+
+var tree = new Node(0);
+
+tree.nodeID();
 
 function addElement(parent, id) {
+	
 
 }
+function removeElement(id){
 
-function drawTree(){
-	
+}
+function printTree(){
+
 }
