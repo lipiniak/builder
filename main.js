@@ -1,15 +1,11 @@
-var Wierzcholek = function (parent,child) {
-  this.parent = parent;
-  this.child = child;
+var Wierzcholek = function (id) {
+  this.id = id;
+  this.child;
 };
 
 
-Wierzcholek.prototype.Tree = function(){
-	this.tree = new Array();
-}
-
-Wierzcholek.prototype.addGalaz = function(wierzcholek,poziom) {
-	this.tree[poziom] = wierzcholek;
+Wierzcholek.prototype.addWierzcholek = function(child) {
+	this.child = child;
 }
 
 
