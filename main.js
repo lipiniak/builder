@@ -1,18 +1,35 @@
-var Node = function (id) {
-  this.id = id;
+var Wierzcholek = function (parent,child) {
+  this.parent = parent;
+  this.child = child;
 };
-//push 
+
+
+Wierzcholek.prototype.Tree = function(){
+	this.tree = new Array();
+}
+
+Wierzcholek.prototype.addGalaz = function(wierzcholek,poziom) {
+	this.tree[poziom] = wierzcholek;
+}
+
+
+
+//przed push
+
+
 Node.prototype.nodeID = function() {
   console.log(this.id);
 };
+
 
 var Tree = function(){
 	this.branch = new Array()
 };
 
-Tree.prototype.addBranch(parent, branch) {
-	this.branch[parent] = branch;
+Tree.prototype.addBranch(parent, child) {
+	this.branch[parent] = child;
 };
+
 var tree = new Node(0);
 
 tree.nodeID();
