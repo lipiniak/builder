@@ -10,17 +10,15 @@ Wierzcholek.prototype.addWierzcholek = function(child) {
 }
 
 Wierzcholek.prototype.WriteTree = function () {
-		console.log(this.id,this.dzieci);
-		console.log("ilosc dzieci:"+this.dzieci.length);
-	if(this.dzieci.length > 0){
-		for (var i = 0 ; i < this.dzieci.length - 1 ; i++) {
-		console.log("-" + i + "-");
-		this.dzieci[i].WriteTree();
+		console.log(this.id);
 
+		for (var i = 0 ; i < this.dzieci.length - 1 ; i++) {
+			console.log("-");
+			console.log("step "+i);
+			return this.dzieci[i].WriteTree();
 		};
-	};
-	
-	
+		console.log('poza pentlą');
+		return;
 };
 
 
