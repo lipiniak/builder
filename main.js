@@ -16,6 +16,7 @@ Wierzcholek.prototype.WriteTree = function () {
 			console.log("-");
 			console.log("step "+i);
 			return this.dzieci[i].WriteTree();
+			console.log("po rekurencji");
 		};
 		console.log('poza pentlą');
 		return;
